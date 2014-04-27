@@ -22,7 +22,7 @@
             <!-- Required SDK核心功能-->
             <activity
 				android:name="com.yujin.notification.NotificationShow"
-				android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+				android:theme="@android:style/Theme.Black.NoTitleBar"
 				/>
 		</config-file>
 		<!--添加提示图片-->

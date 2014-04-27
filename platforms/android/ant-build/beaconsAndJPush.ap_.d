@@ -24,6 +24,7 @@ E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\css \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\img \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\index.html \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\js \
+E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\notificationShow.html \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\plugins \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\test.html \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\test.txt \
@@ -46,8 +47,12 @@ E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\css\lists.css \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\css\main.css \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\css\tizen.css \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\css\win8.css \
+E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\img\1.jpg \
+E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\img\2.jpg \
+E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\img\3.jpg \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\img\beacon_gray.png \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\img\logo.png \
+E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\js\af.carousel.min.js \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\js\appframework.js \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\js\appframework.min.js \
 E:\PhoneGap\beaconsAndJPush\platforms\android\assets\www\js\index.js \

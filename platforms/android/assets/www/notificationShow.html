@@ -1,0 +1,235 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--基本要导入的样式-->
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/appframework.css" />
+		<!--控件样式-->
+		<link rel="stylesheet" type="text/css" href="css/lists.css"  />
+		<link rel="stylesheet" type="text/css" href="css/forms.css"  />
+		<link rel="stylesheet" type="text/css" href="css/buttons.css"  />        
+		<link rel="stylesheet" type="text/css" href="css/badges.css"  />        
+		<link rel="stylesheet" type="text/css" href="css/grid.css"  />
+		<!--主题样式-->
+		<link rel="stylesheet" type="text/css" href="css/android.css"  />
+		<link rel="stylesheet" type="text/css" href="css/win8.css"  />
+		<link rel="stylesheet" type="text/css" href="css/bb.css"  />
+		<link rel="stylesheet" type="text/css" href="css/ios.css"  />
+		<link rel="stylesheet" type="text/css" href="css/ios7.css"  />
+		<link rel="stylesheet" type="text/css" href="css/tizen.css"  />
+		<!--插件样式-->
+		<link rel="stylesheet" type="text/css" href="plugins/css/af.actionsheet.css"  />
+		<link rel="stylesheet" type="text/css" href="plugins/css/af.popup.css"  />
+		<link rel="stylesheet" type="text/css" href="plugins/css/af.scroller.css"  />
+		<link rel="stylesheet" type="text/css" href="plugins/css/af.selectBox.css"  /> 
+		<style type="text/css">
+			/**表示通配符，设置文本颜色*/
+			*{
+				color: #0088D1;
+			}
+		</style>
+		<!--基本要导入的JS-->
+		<script type="text/javascript" charset="utf-8" src="js/appframework.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/appframework.ui.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.scroller.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.css3animate.js"></script>
+		<!--左右滑动侧边栏要导入的JS-->
+        <script type="text/javascript" charset="utf-8" src="plugins/af.touchEvents.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.touchLayer.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.slidemenu.js"></script>
+		<!--插件要导入的js-->
+        <script type="text/javascript" charset="utf-8" src="plugins/af.popup.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.selectBox.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.passwordBox.js"></script>        
+        <script type="text/javascript" charset="utf-8" src="plugins/af.actionsheet.js"></script>   
+        <script type="text/javascript" charset="utf-8" src="plugins/af.8tiles.js"></script>   
+		<!--切换页面显示的效果要导入的js-->
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/fade.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/flip.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/pop.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/slide.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/slideDown.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/slideUp.js"></script>
+		<!-- include af.desktopBrowsers.js on desktop browsers only -->
+        <script type="text/javascript">
+            if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
+                var script = document.createElement("script");
+                script.src = "plugins/af.desktopBrowsers.js";
+                var tag = $("head").append(script);
+            }
+			$.ui.ready(function(){ 
+				$("#afui").get(0).className='ios7'; //设置属于那种风格 
+			});
+        </script>
+		<!--自己的JS,af.carousel.min.js为幻灯片的-->
+        <script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/af.carousel.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+		<!--幻灯JS start-->
+		<script>
+		 var carousel;
+			function init_carousel() {
+				carousel=$("#carousel").carousel({
+					pagingDiv: "carousel_dots",
+					pagingCssName: "carousel_paging2",
+					pagingCssNameSelected: "carousel_paging2_selected",
+					preventDefaults:false,
+					wrap:true //Set to false to disable the wrap around
+				});
+			}
+			window.addEventListener("load", init_carousel, false);
+		
+		</script>
+		<!--幻灯JS end-->
+		<!--幻灯style start-->
+		<style>
+			.carousel_paging2 {
+				border-radius: 10px;
+				
+				background: #ccc;
+				width: 10px;
+				height: 10px;
+				display:inline-block;
+			}
+
+			.carousel_paging2_selected {
+				border-radius: 10px;
+				
+				background: #000;
+				width: 10px;
+				height: 10px;
+				display:inline-block;
+			}
+
+			.spacer {
+				width: 10px;
+				float: left;
+			}
+			.carousel_content {
+				-webkit-transform: translate3d(0, 0, 0);
+			}
+		</style>
+		<!--幻灯style end-->
+        <title>Notification Test</title>
+    </head>
+	<body>
+        <div id="afui" class="ios7">
+			<div id="content">
+				<div id="notification" class="panel" selected="true" title="消息推送提醒页面">
+					<div id="carousel" style="display:block;height:200px;width:100%;">
+						<!--
+						<div style="background: yellow;"></div>
+						<div style="background: green;"></div>
+						<div style="background: blue;"></div>
+						<div style="background: pink;"></div>
+						-->
+						<img src="./img/1.jpg"/>
+						<img src="./img/2.jpg"/>
+						<img src="./img/3.jpg"/>
+					</div>
+					<div id="carousel_dots" style="text-align: center; margin:auto;  display : table; clear: both; position: relative; top: 40%; z-index: 200">
+					</div>
+					<a class="button" onclick="showCustomHtmlSheet()">Show Custom Html Sheet</a>
+					<a class="button" onclick="showCustomJsonSheet()">Show Custom Json Sheet</a>
+
+
+					<a class="button" onclick="showPopup1()">Alert style diaglog</a>
+					<br>
+					<a class="button" onclick="showPopup2()">Detailed ineraction</a>
+					<br>
+					<a class="button" onclick="showPopup3()">HTML markup</a>
+					<ul class="list"> 
+						<li>Test1</li>
+						<li>Test1</li>      
+						<li><a class="icon picture big">Picture</a></li>
+						<li><a class="icon new big">New</a></li>
+                   </ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function showCustomHtmlSheet() {
+				$("#afui").actionsheet('<a  >Back</a><a  onclick="alert(\'hi\');" >Show Alert 3</a><a  onclick="alert(\'goodbye\');">Show Alert 4</a>');
+			}
+
+			function showCustomJsonSheet() {
+				$("#afui").actionsheet(
+				[{
+					text: 'back',
+					cssClasses: 'red',
+					handler: function () {
+						$.ui.goBack();
+					}
+				}, {
+					text: 'show alert 5',
+					cssClasses: 'blue',
+					handler: function () {
+						alert("hi");
+					}
+				}, {
+					text: 'show alert 6',
+					cssClasses: '',
+					handler: function () {
+						alert("goodbye");
+					}
+				}]);
+			}
+			function showPopup1() {
+				$("#afui").popup("I'm replacing an alert box");
+			}
+
+			function showPopup2() {
+				$("#afui").popup({
+					title: "Alert! Alert!",
+					message: "This is a test of the emergency alert system!! Don't PANIC!",
+					cancelText: "Cancel me",
+					cancelCallback: function () {
+						console.log("cancelled");
+					},
+					doneText: "I'm done!",
+					doneCallback: function () {
+						console.log("Done for!");
+					},
+					cancelOnly: false
+				});
+			}
+
+			function showPopup3() {
+				$("#afui").popup({
+					title: "Login",
+					message: "Username: <input type='text' class='af-ui-forms'><br>Password: <input type='text' class='af-ui-forms' style='webkit-text-security:disc'>",
+					cancelText: "Cancel",
+					cancelCallback: function () {},
+					doneText: "Login",
+					doneCallback: function () {
+						alert("Logging in")
+					},
+					cancelOnly: false
+				});
+			}
+		</script>
+	</body>	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

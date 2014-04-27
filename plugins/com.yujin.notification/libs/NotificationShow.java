@@ -11,6 +11,6 @@ public class NotificationShow extends DroidGap {
 		super.onCreate(savedInstanceState);
 		//setContentView(R.layout.activity_beacons);
 		//加载 消息提示的界面
-        super.loadUrl("file:///android_asset/www/test.html");
+        super.loadUrl("file:///android_asset/www/notificationShow.html");
 	}
 }

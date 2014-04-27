@@ -37,7 +37,7 @@
                 "<meta-data android:name=\"JPUSH_CHANNEL\" android:value=\"developer-default\" />": 1,
                 "<meta-data android:name=\"JPUSH_APPKEY\" android:value=\"6f4b9d81191d8bd3d1864d3d\" />": 1,
                 "<service android:exported=\"false\" android:name=\"com.estimote.sdk.service.BeaconService\" />": 1,
-                "<activity android:name=\"com.yujin.notification.NotificationShow\" android:theme=\"@android:style/Theme.Black.NoTitleBar.Fullscreen\" />": 1
+                "<activity android:name=\"com.yujin.notification.NotificationShow\" android:theme=\"@android:style/Theme.Black.NoTitleBar\" />": 1
             },
             "/*": {
                 "<uses-feature android:name=\"android.hardware.bluetooth_le\" android:required=\"true\" />": 1,
