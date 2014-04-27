@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.yujin.notification" version="0.1">
+    <name>MyNotification</name>
+    <description>MyNotification</description>
+    <license>Apache 2.0</license>
+
+    <js-module src="www/MyNotification.js" name="MyNotification">
+        <clobbers target="MyNotification" />
+    </js-module>
+    <!-- android -->
+    <platform name="android">
+        <source-file src="src/android/MyNotification.java" target-dir="src/com/yujin/notification" />
+        <source-file src="libs/NotificationShow.java" target-dir="src/com/yujin/notification" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MyNotification">
+                <param name="android-package" value="com.yujin.notification.MyNotification" />
+            </feature>
+        </config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <!-- Required SDK核心功能-->
+            <activity
+				android:name="com.yujin.notification.NotificationShow"
+				android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+				/>
+		</config-file>
+		<!--添加提示图片-->
+        <source-file src="libs/beacon_gray.png" target-dir="res/drawable-xhdpi" />
+    </platform>
+</plugin>

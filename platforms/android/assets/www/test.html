@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<title>My First html!</title>
+		<!--
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type='text/javascript'>
+			$(document).ready(function(){
+				$('submit').click(function(e){
+					e.preventDefault();
+					alert($('username').val());
+					
+				});
+				
+			});
+		</script>
+		-->
+	</head>
+	<body>
+		<form id="test" >
+			<fieldset>
+				<legend>用户名和密码：</legend>
+				<input id="hiddenField" name="hiddenField" type="hidden" value="hiddenvalue"/>
+				<label for="username">用户名：</label>
+				<input type="text" id="username" name="username" value="testText" size="15"/>
+				<label for="pass">密码：</label>
+				<input type="password" id="pass" name="pass"  size="15" maxlength="25"/>
+			</fieldset>
+			<fieldset>
+				<legend>性别：</legend>
+				<label for="sex">男</label>
+				<input type="radio" value="1" id="sex" name="sex" />
+				<label for="sex">女</label>
+				<input type="radio" value="2" id="sex" name="sex" />
+				<label for="sex">保密</label>
+				<input type="radio" value="3" id="sex" name="sex" />
+			</fieldset>
+			<fieldset>
+				<legend>爱好：</legend>
+				<label for="fav">计算机</label>
+				<input type="checkbox" value="1" id="fav" name="fav" />
+				<label for="fav">旅游</label>
+				<input type="checkbox" value="2" id="fav" name="fav" />
+				<label for="fav">购物</label>
+				<input type="checkbox" value="3" id="fav" name="fav" />
+			</fieldset>
+			<fieldset>
+				<legend>照片：</legend>
+				<label for="myimage">个性照片上传</label>
+				<input type="file"  id="myimage" name="myimage"  />
+			</fieldset>
+			<fieldset>
+				<legend>提交：</legend>
+				<input type="submit" value="submit" id="submit" name="submit"  />
+				<input type="reset" value="reset" id="reset" name="reset"  />
+			</fieldset>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

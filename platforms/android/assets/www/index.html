@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--基本要导入的样式-->
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/appframework.css" />
+		<!--控件样式-->
+		<link rel="stylesheet" type="text/css" href="css/lists.css"  />
+		<link rel="stylesheet" type="text/css" href="css/forms.css"  />
+		<link rel="stylesheet" type="text/css" href="css/buttons.css"  />        
+		<link rel="stylesheet" type="text/css" href="css/badges.css"  />        
+		<link rel="stylesheet" type="text/css" href="css/grid.css"  />
+		<!--主题样式-->
+		<link rel="stylesheet" type="text/css" href="css/android.css"  />
+		<link rel="stylesheet" type="text/css" href="css/win8.css"  />
+		<link rel="stylesheet" type="text/css" href="css/bb.css"  />
+		<link rel="stylesheet" type="text/css" href="css/ios.css"  />
+		<link rel="stylesheet" type="text/css" href="css/ios7.css"  />
+		<link rel="stylesheet" type="text/css" href="css/tizen.css"  />
+		<!--插件样式-->
+		<link rel="stylesheet" type="text/css" href="plugins/css/af.actionsheet.css"  />
+		<link rel="stylesheet" type="text/css" href="plugins/css/af.popup.css"  />
+		<link rel="stylesheet" type="text/css" href="plugins/css/af.scroller.css"  />
+		<link rel="stylesheet" type="text/css" href="plugins/css/af.selectBox.css"  /> 
+		
+		
+		
+		<style type="text/css">
+			/**表示通配符，设置文本颜色*/
+			*{
+				color: #0088D1;
+			}
+			/*表示去掉list里面的箭头*/
+			#afui .mystyle > li > a:after{
+				font-family: normal;
+			}
+			#afui .panel .myButtom{
+				border-radius: 10px; 
+				background:#0088D1; 
+				color:white;
+			}
+			
+			h4{
+				margin-left: 50px;
+				float: left;
+				font-size: 25px;
+			}	
+			#refresh{
+				margin-left: 30px;
+				float: left;
+				font-size: 20px;
+				margin-top: 5px;
+				width: 60px;
+			}
+			#point{
+				margin-left: 40px;
+				float: left;
+				font-size: 20px;
+				margin-top: 3px;
+			}
+			p{
+				color: red;
+				margin-left: 5px;
+				font-size: 14px;
+			}
+			#myCanvas{
+				border: 1px solid green;
+				clear: both;
+				margin-top: 10px;
+				display: block;
+				
+			}
+			#afui #menu_beacons .myFloat{
+				float: left;
+			}
+			#afui #menu_beacons li a{
+				height: 60px;
+				padding: 4px 20px 20px 0px;
+			}
+			#afui #menu_beacons p{
+				margin-left:10px;
+			}
+			#afui .list li{
+				padding: 20px 20px 20px 4px;
+			}
+			#afui #menu .list > li > a{
+				margin-left: 0px;
+			}
+			#afui #location{
+				padding: 2px;
+			}
+		</style>
+		
+		<!--基本要导入的JS-->
+		<script type="text/javascript" charset="utf-8" src="js/appframework.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/appframework.ui.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.scroller.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.css3animate.js"></script>
+		<!--左右滑动侧边栏要导入的JS-->
+        <script type="text/javascript" charset="utf-8" src="plugins/af.touchEvents.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.touchLayer.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.slidemenu.js"></script>
+		<!--插件要导入的js-->
+        <script type="text/javascript" charset="utf-8" src="plugins/af.popup.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.selectBox.js"></script>
+        <script type="text/javascript" charset="utf-8" src="plugins/af.passwordBox.js"></script>        
+        <script type="text/javascript" charset="utf-8" src="plugins/af.actionsheet.js"></script>   
+        <script type="text/javascript" charset="utf-8" src="plugins/af.8tiles.js"></script>   
+		<!--切换页面显示的效果要导入的js-->
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/fade.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/flip.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/pop.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/slide.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/slideDown.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ui/transitions/slideUp.js"></script>
+		<!-- include af.desktopBrowsers.js on desktop browsers only -->
+        <script type="text/javascript">
+            if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
+                var script = document.createElement("script");
+                script.src = "plugins/af.desktopBrowsers.js";
+                var tag = $("head").append(script);
+            }
+			$.ui.ready(function(){ 
+				$("#afui").get(0).className='ios7'; //设置属于那种风格 
+			});
+        </script>
+		<!--自己的JS-->
+        <script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+        <title>Beacons JPush</title>
+    </head>
+    <body>
+        <div id="afui" class="ios7">
+			<div id="content">
+				<div id="main" class="panel" selected="true" data-footer="custom_footer" data-header="custom_header" data-nav="menu_beacons" data-tab="navbar_home">
+					<h2 class='expanded' onclick='showHide(this,"main_info");'>功能简介</h2>
+                    <p id='main_info'>
+						1、基于蓝牙的三点定位
+						<br />
+						2、基于蓝牙的本地推送
+						<br />
+						3、设置远程JPush推送的Tags和Alias
+						<br />
+						4、以上功能目前只是正对Android
+					</p>
+					<ul class="list mystyle" >
+						<li class="red">
+							<a href="#location" class="icon location big " >定位</a>
+						</li>
+						<li class="blue">
+							<a href="#notification" class="icon message big" >推送</a>
+						</li>
+						<li>
+							<a href="#jpushSetting" class="icon settings big" >设置</a>
+						</li>
+						<li>
+							<a href="#load" class="icon download big" >测试远程加载</a>
+						</li>
+					</ul>
+				</div>
+				<!--蓝牙定位start-->
+				<div id="location" class="panel" data-footer="custom_footer" data-header="custom_header" data-nav="menu_beacons">
+					<h4>模拟定位</h4>
+					<span id="point">(x,y)</span>
+					<button id="refresh" onclick="getDistance()" class="icon refresh">刷新</button>
+					<canvas id="myCanvas" width="350" height="550" border="1">您的浏览器不支持canvas!</canvas>
+					<p>备注：宽度为350*550，基站点中心为距两边各边50<br />minor值为1的放左上角，为2的右上角，3的在左下角</p>
+				</div>
+				<!--蓝牙定位end-->
+				<!--APP内部消息推送start-->
+				<div id="notification" class="panel"  data-footer="custom_footer" data-header="custom_header" data-nav="menu_beacons" >
+					<h2 class='collapsed' onclick='showHide(this,"notification_info");'>功能简介</h2>
+                    <p id='notification_info' style="display: none;">
+						1、minor值为1的Beacons测试推送
+						<br />
+						2、minor值为2的Beacons测试推送
+						<br />
+						3、minor值为3的Beacons测试推送
+					</p>
+					<center style="background:#0088D1;">
+						<img border="0" src="img/logo.png" title="Urban Airship" align="center" />
+					</center>
+					<form >
+						<a id="one" class="button icon message block myButtom">Minor值为1的消息</a>
+						<a id="tow" class="button icon message block myButtom">Minor值为2的消息</a>
+						<a id="three" class="button icon message block myButtom">Minor值为3的消息</a>
+					</form>
+				</div>
+				<!--APP内部消息推送end-->
+				<!--JPush远程推送设置start-->
+				<div id="jpushSetting" class="panel"  data-footer="custom_footer" data-header="custom_header" data-nav="menu_beacons" >
+					<h2 class='collapsed' onclick='showHide(this,"jpush_info");'>功能简介</h2>
+                    <p id='jpush_info' style="display: none;">
+						1、添加远程JPush推送设备Alias
+						<br />
+						2、添加远程JPush推送设备Tags
+						<br />
+						3、设置远程JPush推送的Tags和Alias
+						<br />
+						4、设置远程JPush推送的自定义消息样式
+						<br />
+						5、获取远程JPush推送的通知信息
+					</p>
+					<center style="background:#0088D1;">
+						<img border="0" src="img/logo.png" title="Urban Airship" align="center" />
+					</center>
+					<form >
+						<a id="alais" class="button icon add block myButtom">添加别名</a>
+						<a id="tags" class="button icon add block myButtom">添加标签</a>
+						<a id="tagsAndAlais" class="button icon add block myButtom">添加标签和别名</a>
+						<a id="style" class="button icon settings block myButtom">设置样式</a>
+						<a id="getInfo" class="button icon message block myButtom">获取推送的通知</a>
+					</form>
+				</div>
+				<!--JPush远程推送设置end-->
+				<!--测试远程加载页面start-->
+				<div id="load" class="panel"  data-footer="custom_footer" data-header="custom_header" data-nav="menu_beacons" >
+					<h1>这个页面内容从别处加载</h1>
+				</div>
+				<!--测试远程加载页面end-->
+			</div>
+			<header id="custom_header">
+				<h1 style="color: #0088D1;">蓝牙系统</h1>
+				<a id="backButton" class="button" style="visibility: hidden;">返回</a>
+				<a id="menubadge" onclick="af.ui.toggleSideMenu()" class="menuButton" style="float: left;"></a>
+			</header>
+			<footer id="custom_footer">
+				<a href="#main" id='navbar_home' class='icon home' >主页<span class='af-badge lr'>6</span></a>
+                <a href="#main" id='navbar_fun' class="icon stack" >功能</a>
+                <a href="#main" id='navbar_res' class="icon picture" >资源</a>
+                <a href="test.html" id='navbar_info' class="icon info" data-persist-ajax="true">信息</a>
+			</footer>
+			
+			<nav id="menu_beacons">
+                <ul class="list" id="navList">
+                    <li class="divider">附近蓝牙基站信息</li>
+                    <li>
+                        <a href="#">
+							<img src="./img/beacon_gray.png" class="myFloat" />
+							<div class="myFloat">
+								<p>Minor: 5434fsdf</p>
+								<p>Accuracy: 135cm</p>
+							</div>
+						</a>
+                    </li>
+                </ul>
+            </nav>
+			<!-- 右边栏显示
+			<aside>
+                <ul class="list">
+                     <li class="divider">Beacons</li>
+                    <li>
+                        <a href="#">beacons1</a>
+                    </li>
+                    <li>
+                        <a href="#">beacons2</a>
+                    </li>
+                    <li>
+                        <a href="#">beacons3</a>
+                    </li>
+                </ul>
+            </aside>
+			-->
+		</div>
+    </body>
+</html>
